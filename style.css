@@ -29,13 +29,10 @@ body::before {
     backdrop-filter: blur(15px);
 }
 
-/* UTILITIES */
 .regular-txt {
     font-weight: 400;
 }
 
-
-/* END UTILITIES */
 
 .main-container {
     width: 300px;
@@ -49,7 +46,6 @@ body::before {
     padding: 20px;
 }
 
-/* Input Container */
 .input-container {
     position: relative;
     margin-bottom: 25px;
@@ -87,9 +83,7 @@ body::before {
     cursor: pointer;
 }
 
-/* End Input Container */
 
-/* Section - Weather Info */
 .weather-info {
     display: flex;
     flex-direction: column;
@@ -179,10 +173,7 @@ body::before {
     width: 35px;
     height: 35px;
 }
-/* END Section - Weather Info */
 
-
-/* SECTION : MESSAGE */
 .section-message {
     display: flex;
     flex-direction: column;
@@ -196,6 +187,3 @@ body::before {
     height: 180px;
     width: fit-content;
 }
-
-
-/* END SECTION: MESSAGE */
