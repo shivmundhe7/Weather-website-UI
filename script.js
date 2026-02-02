@@ -15,7 +15,7 @@ const currentDateTxt = document.querySelector('.current-date-txt');
 
 const apiKey = '76a9ea1e63640877014f462ebee7be79';
 
-// SEARCH BUTTON EVENT
+
 searchBtn.addEventListener('click', () => {
     if (cityInput.value.trim() !== '') {
         updateWeatherInfo(cityInput.value);
@@ -24,7 +24,7 @@ searchBtn.addEventListener('click', () => {
     }
 });
 
-// ENTER KEY EVENT
+
 cityInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter' && cityInput.value.trim() !== '') {
         updateWeatherInfo(cityInput.value);
@@ -33,14 +33,12 @@ cityInput.addEventListener('keydown', (event) => {
     }
 });
 
-// FETCH DATA
 async function getFetchData(endPoint, city) {
     const apiUrl = `https://api.openweathermap.org/data/2.5/${endPoint}?q=${city}&appid=${apiKey}&units=metric`;
     const response = await fetch(apiUrl);
     return response.json();
 }
 
-// UPDATE WEATHER UI
 async function updateWeatherInfo(city) {
     const weatherData = await getFetchData('weather', city);
 
@@ -63,7 +61,6 @@ async function updateWeatherInfo(city) {
     windValuetTxt.textContent = speed + ' m/s';
     weatherSummaryImg.src = `/assets/weather/${main.toLowerCase()}.svg`;
 
-    // Update current date (optional)
     const today = new Date();
     const options = { weekday: 'short', day: '2-digit', month: 'short' };
     currentDateTxt.textContent = today.toLocaleDateString('en-US', options);
@@ -71,7 +68,6 @@ async function updateWeatherInfo(city) {
     showDisplaySection(WeatherInfoSection);
 }
 
-// TOGGLE DISPLAY
 function showDisplaySection(section) {
     [WeatherInfoSection, searchCitySection, notFoundSection].forEach(sec => {
         sec.style.display = 'none';
