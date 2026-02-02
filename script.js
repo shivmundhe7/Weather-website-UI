@@ -4,7 +4,6 @@ const searchBtn = document.querySelector('.search-btn');
 const WeatherInfoSection = document.querySelector('.weather-info');
 const notFoundSection = document.querySelector('.not-found');
 const searchCitySection = document.querySelector('.search-city');
-
 const countrytxt = document.querySelector('.country-txt');
 const tempTxt = document.querySelector('.temp-txt');
 const conditionTxt = document.querySelector('.condition-txt'); // ✅ Fixed selector
